@@ -8,11 +8,12 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "commonjs",
+    "moduleResolution": "node",
     "target": "ES2020",
+    "lib": ["ES2020"],
     "types": [],
-    "rootDir": ".src/",
-    "outDir": ".dist/",
-    "strict": true,
+    "rootDir": "src/",
+    "outDir": "dist/",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     // For nodejs:
@@ -45,5 +46,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
